@@ -6,6 +6,7 @@ All Rights Reserved.
 Confidential and Proprietary - Protected under copyright and other laws.
 ==============================================================================*/
 
+using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
 
@@ -78,13 +79,29 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
     protected virtual void OnTrackingFound()
     {
+        StateManager sm = TrackerManager.Instance.GetStateManager();
+
+        IList<TrackableBehaviour> activeTrackables = (IList<TrackableBehaviour>)sm.GetActiveTrackableBehaviours();
+
+        if (activeTrackables.Count == 0)
+        {
+            print(activeTrackables.Count);
+        }
+        else
+        {
+            print(activeTrackables.Count);
+        }
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);
 
+        print(rendererComponents.Length);
         // Enable rendering:
         foreach (var component in rendererComponents)
+        {
+            print(component.ToString());
             component.enabled = true;
+        }
 
         // Enable colliders:
         foreach (var component in colliderComponents)

@@ -145,7 +145,7 @@ public class DefaultInitializationErrorHandler : VuforiaMonoBehaviour
                 mErrorText = 
                     "User denied Camera access to this app.\n" +
                     "To restore, enable Camera access in Settings:\n" +
-                    "Settings > Privacy > Camera > " + Application.productName + "\n" +
+                    //"Settings > Privacy > Camera > " + Application.productName + "\n" +
                     "Also verify that the Camera is enabled in:\n" +
                     "Settings > General > Restrictions.";
                 break;

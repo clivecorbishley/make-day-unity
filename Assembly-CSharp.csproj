@@ -61,6 +61,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\LessThan.cs" />
+    <Compile Include="Assets\Models\Cards.cs" />
+    <Compile Include="Assets\Models\Cat.cs" />
+    <Compile Include="Assets\Models\Dog.cs" />
+    <Compile Include="Assets\Models\Drone.cs" />
+    <Compile Include="Assets\Models\Egg.cs" />
+    <Compile Include="Assets\Models\Plant.cs" />
+    <Compile Include="Assets\Models\Sloth.cs" />
+    <Compile Include="Assets\Models\Unicorn.cs" />
+    <Compile Include="Assets\SingleStateManager.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />
     <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
